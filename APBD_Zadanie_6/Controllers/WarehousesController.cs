@@ -4,7 +4,7 @@ using Zadanie5.Services;
 
 namespace Zadanie5.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/warehouse")]
     [ApiController]
     public class WarehousesController : ControllerBase
     {
@@ -18,9 +18,8 @@ namespace Zadanie5.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProduct(ProductWarehouse product)
         {
-            int idProduct
-            _warehouseService.AddProduct(product);
-            return Ok();
+            int idProduct = await _warehouseService.AddProduct(product);
+            return Ok(idProduct);
         }
     }
 }

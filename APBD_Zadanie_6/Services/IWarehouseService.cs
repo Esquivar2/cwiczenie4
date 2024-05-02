@@ -4,6 +4,6 @@ namespace Zadanie5.Services
 {
     public interface IWarehouseService
     {
-        public async Task<int> AddProduct(ProductWarehouse productWarehouse);
+        Task<int> AddProduct(ProductWarehouse productWarehouse);
     }
 }
